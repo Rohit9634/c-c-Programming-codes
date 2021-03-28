@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main()
+{
+    int num, rem = 0, temp, sum = 0;
+
+    printf("Enter any number to find it's octal");
+    scanf("%d", &num);
+    int r = num;
+    while (num != 0)
+    {
+        rem = num % 8;
+        sum = sum * 10 + rem;
+        num /= 8;
+    }
+    
+    while (sum != 0)
+    {
+        temp = sum % 10;
+        rem = rem * 10 + temp;
+        sum /= 10;
+    }
+    printf("The octal of %d is = %d", r, rem);
+    return 0;
+}
